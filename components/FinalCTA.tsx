@@ -4,7 +4,7 @@ import Button from './ui/Button';
 
 const FinalCTA: React.FC = () => {
   return (
-    <section className="py-24 px-6 bg-gray-50/50 dark:bg-white/5 transition-colors">
+    <section className="py-16 md:py-24 px-6 bg-gray-50/50 dark:bg-white/5 transition-colors">
       <div className="max-w-4xl mx-auto text-center">
         <FadeIn>
           <h2 className="text-3xl md:text-5xl font-bold text-primary dark:text-white mb-6 leading-tight transition-colors">
@@ -16,7 +16,7 @@ const FinalCTA: React.FC = () => {
             Agendá una llamada y trabajemos juntos en el crecimiento de tu negocio.
           </p>
         </FadeIn>
-        <FadeIn delay={0.2}>
+        <FadeIn delay={0.2} className="flex justify-center">
           <Button withArrow className="px-8 py-4 text-base">
             Agendar Llamada
           </Button>

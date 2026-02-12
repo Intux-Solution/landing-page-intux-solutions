@@ -25,8 +25,8 @@ const PainPoints: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 md:py-28 px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-16 md:mb-20">
+    <section className="py-16 md:py-24 px-6 max-w-7xl mx-auto">
+      <div className="text-center mb-12 md:mb-16">
         <FadeIn>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary dark:text-white leading-tight transition-colors">
             ¿Tu equipo dedica mucho tiempo a tareas<br className="hidden md:block"/> operativas que podrían automatizarse?
@@ -56,7 +56,7 @@ const PainPoints: React.FC = () => {
       </div>
 
       <FadeIn delay={0.5}>
-        <div className="mt-16 text-center">
+        <div className="mt-12 text-center">
             <p className="text-sm font-semibold text-primary dark:text-white tracking-wide transition-colors">
                 Automatizar no es solo ahorrar tiempo. Es evitar errores, delegar lo que no suma y tener el control real de tu operación.
             </p>

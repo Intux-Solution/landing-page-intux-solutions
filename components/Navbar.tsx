@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sparkles, Moon, Sun } from 'lucide-react';
+import { Menu, X, Moon, Sun } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from './ui/Button';
 
@@ -33,11 +33,12 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-8 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2 font-bold text-xl tracking-tight text-primary dark:text-white">
-            <div className="w-8 h-8 bg-primary dark:bg-white rounded-lg flex items-center justify-center transition-colors">
-                <Sparkles className="text-white dark:text-primary w-4 h-4 transition-colors" />
-            </div>
-            Intux Solutions
+        <div className="flex items-center">
+            <img 
+              src={isDark ? "/logo-white.png" : "/logo-dark.png"} 
+              alt="Intux Solutions" 
+              className="h-8 md:h-9 w-auto object-contain"
+            />
         </div>
 
         {/* Desktop Links */}

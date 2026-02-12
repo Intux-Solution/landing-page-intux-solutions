@@ -23,7 +23,7 @@ const Solutions: React.FC = () => {
   ];
 
   return (
-    <section id="soluciones" className="py-20 md:py-28 px-6 bg-white dark:bg-darkBg transition-colors">
+    <section id="soluciones" className="py-16 md:py-24 px-6 bg-white dark:bg-darkBg transition-colors">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
         {/* Left Content */}
@@ -63,7 +63,7 @@ const Solutions: React.FC = () => {
 
       </div>
       
-      <FadeIn delay={0.4} className="mt-20 text-center">
+      <FadeIn delay={0.4} className="mt-16 text-center">
         <p className="text-sm font-bold text-primary dark:text-white transition-colors">
             El objetivo es simple. Menos fricción operativa y mayor eficiencia en el funcionamiento del negocio.
         </p>

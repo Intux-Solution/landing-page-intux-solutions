@@ -1,14 +1,21 @@
 import React from 'react';
-import { Sparkles } from 'lucide-react';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  isDark: boolean;
+}
+
+const Footer: React.FC<FooterProps> = ({ isDark }) => {
   return (
     <footer className="py-10 px-6 border-t border-gray-100 dark:border-white/5 transition-colors">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         
         {/* Logo Icon */}
-        <div className="w-8 h-8 bg-primary dark:bg-white rounded-lg flex items-center justify-center transition-colors">
-            <Sparkles className="text-white dark:text-primary w-4 h-4 transition-colors" />
+        <div className="flex items-center">
+            <img 
+              src={isDark ? "/logo-white.png" : "/logo-dark.png"} 
+              alt="Intux Solutions" 
+              className="h-6 md:h-7 w-auto object-contain opacity-80"
+            />
         </div>
 
         {/* Copyright */}

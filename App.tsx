@@ -44,7 +44,7 @@ const App: React.FC = () => {
         <Process />
         <FinalCTA />
       </main>
-      <Footer />
+      <Footer isDark={isDark} />
     </div>
   );
 };

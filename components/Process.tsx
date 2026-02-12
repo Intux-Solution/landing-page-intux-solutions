@@ -24,8 +24,8 @@ const Process: React.FC = () => {
   ];
 
   return (
-    <section id="proceso" className="py-20 md:py-32 px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-20">
+    <section id="proceso" className="py-16 md:py-24 px-6 max-w-7xl mx-auto">
+      <div className="text-center mb-16">
         <FadeIn>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary dark:text-white transition-colors">¿Cómo lo hacemos?</h2>
           <p className="text-gray-500 dark:text-gray-400 transition-colors">Un enfoque metódico para resultados predecibles.</p>

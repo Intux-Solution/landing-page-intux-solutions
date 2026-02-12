@@ -4,7 +4,7 @@ import Button from './ui/Button';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center px-6 overflow-hidden pt-20 pb-16 md:pt-40 md:pb-20">
       <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
         
         {/* Pill Tag */}
@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
         {/* Headline */}
         <FadeIn delay={0.2}>
           <h1 className="text-4xl md:text-6xl lg:text-[4rem] font-extrabold leading-[1.1] tracking-tight text-primary dark:text-white mb-6 transition-colors">
-            Escalá tu negocio sin aumentar tu carga operativa.
+            Escalá tu negocio <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8CAD9] to-[#61788C]">sin aumentar tu carga operativa.</span>
           </h1>
         </FadeIn>
 
