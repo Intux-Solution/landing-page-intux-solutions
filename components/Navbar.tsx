@@ -34,11 +34,13 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
       <div className="max-w-7xl mx-auto px-6 md:px-8 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-            <img 
-              src={isDark ? "/logo-white.png" : "/logo-dark.png"} 
-              alt="Intux Solutions" 
-              className="h-8 md:h-9 w-auto object-contain"
-            />
+            <a href="#" className="block hover:opacity-80 transition-opacity">
+              <img 
+                src={isDark ? "/logo-white.png" : "/logo-dark.png"} 
+                alt="Intux Solutions" 
+                className="h-8 md:h-9 w-auto object-contain"
+              />
+            </a>
         </div>
 
         {/* Desktop Links */}

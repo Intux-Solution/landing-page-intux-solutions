@@ -11,11 +11,13 @@ const Footer: React.FC<FooterProps> = ({ isDark }) => {
         
         {/* Logo Icon */}
         <div className="flex items-center">
-            <img 
-              src={isDark ? "/logo-white.png" : "/logo-dark.png"} 
-              alt="Intux Solutions" 
-              className="h-6 md:h-7 w-auto object-contain opacity-80"
-            />
+            <a href="#" className="block hover:opacity-100 transition-opacity opacity-80">
+              <img 
+                src={isDark ? "/logo-white.png" : "/logo-dark.png"} 
+                alt="Intux Solutions" 
+                className="h-6 md:h-7 w-auto object-contain"
+              />
+            </a>
         </div>
 
         {/* Copyright */}
