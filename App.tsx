@@ -13,7 +13,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full min-h-screen flex flex-col font-sans text-primary dark:text-white bg-white dark:bg-darkBg selection:bg-primary selection:text-white dark:selection:bg-white dark:selection:text-primary">
+    <div className="w-full min-h-screen flex flex-col font-sans text-white bg-darkBg selection:bg-white selection:text-primary">
       <Navbar />
       <main className="flex-grow">
         <Hero />

@@ -4,11 +4,11 @@ import Button from './ui/Button';
 
 const FinalCTA: React.FC = () => {
   return (
-    <section className="py-16 md:py-24 px-6 bg-gray-50/50 dark:bg-white/5 transition-colors">
+    <section className="py-16 md:py-24 px-6 dark:bg-[#1C222B] transition-colors">
       <div className="max-w-4xl mx-auto text-center">
         <FadeIn>
           <h2 className="text-3xl md:text-5xl font-bold text-primary dark:text-white mb-6 leading-tight transition-colors">
-            Dejá atrás la gestión manual y<br/> enfocate en crecer.
+            Dejá atrás la gestión manual y<br /> enfocate en crecer.
           </h2>
         </FadeIn>
         <FadeIn delay={0.1}>
