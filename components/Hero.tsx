@@ -4,9 +4,9 @@ import Button from './ui/Button';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-6 overflow-hidden pt-20 pb-16 md:pt-40 md:pb-20">
+    <section id="inicio" className="relative min-h-screen flex flex-col justify-center px-6 overflow-hidden pt-20 pb-16 md:pt-40 md:pb-20">
       <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-        
+
         {/* Pill Tag */}
         <FadeIn delay={0.1}>
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-gray-100 dark:bg-white/10 rounded-full mb-8 border border-gray-200 dark:border-white/10 transition-colors">
@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
         {/* Subtext */}
         <FadeIn delay={0.3}>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed transition-colors">
-            Transformamos tareas manuales y repetitivas en sistemas autónomos inteligentes, 
+            Transformamos tareas manuales y repetitivas en sistemas autónomos inteligentes,
             permitiendo que tu equipo se enfoque en estrategias de alto valor.
           </p>
         </FadeIn>
@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
         </FadeIn>
 
       </div>
-      
+
       {/* Abstract Background Decoration */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gray-50 dark:bg-primary/20 rounded-full blur-3xl -z-10 opacity-60 pointer-events-none transition-colors" />
     </section>
