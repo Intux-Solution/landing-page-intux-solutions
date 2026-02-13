@@ -25,7 +25,7 @@ const Solutions: React.FC = () => {
   return (
     <section id="soluciones" className="py-16 md:py-24 px-6 bg-white dark:bg-darkBg transition-colors">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        
+
         {/* Left Content */}
         <div>
           <FadeIn>
@@ -36,7 +36,7 @@ const Solutions: React.FC = () => {
               Tecnología que trabaja para vos, no al revés.
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-lg mb-8 leading-relaxed transition-colors">
-              En Intux desarrollamos soluciones a medida que permiten automatizar procesos, 
+              En Intux desarrollamos soluciones a medida que permiten automatizar procesos,
               integrar herramientas y reducir la carga operativa diaria de tu equipo.
             </p>
             <Button withArrow>
@@ -49,8 +49,8 @@ const Solutions: React.FC = () => {
         <div className="flex flex-col gap-6">
           {features.map((item, idx) => (
             <FadeIn key={idx} delay={idx * 0.15} direction="left">
-              <div className="bg-white dark:bg-darkCard rounded-full p-3 pr-8 shadow-sm border border-gray-100 dark:border-white/5 flex items-center gap-4 hover:shadow-md transition-all">
-                <div className={`w-12 h-12 min-w-[48px] rounded-full ${item.iconBg} flex items-center justify-center transition-colors`}>
+              <div className="bg-white dark:bg-darkCard rounded-full p-3 pr-8 shadow-sm border border-gray-100 dark:border-white/5 flex items-center gap-4 transition-all duration-300 hover:border-white/10 hover:bg-gradient-to-br hover:from-darkCard hover:to-white/5 hover:scale-[1.02] group">
+                <div className={`w-12 h-12 min-w-[48px] rounded-full ${item.iconBg} flex items-center justify-center transition-transform group-hover:scale-110 duration-300`}>
                   {item.icon}
                 </div>
                 <span className="font-semibold text-primary dark:text-white text-sm md:text-base transition-colors">
@@ -62,10 +62,10 @@ const Solutions: React.FC = () => {
         </div>
 
       </div>
-      
+
       <FadeIn delay={0.4} className="mt-16 text-center">
         <p className="text-sm font-bold text-primary dark:text-white transition-colors">
-            El objetivo es simple. Menos fricción operativa y mayor eficiencia en el funcionamiento del negocio.
+          El objetivo es simple. Menos fricción operativa y mayor eficiencia en el funcionamiento del negocio.
         </p>
       </FadeIn>
     </section>

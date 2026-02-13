@@ -8,35 +8,13 @@ import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
-  const [isDark, setIsDark] = useState(false);
-
   useEffect(() => {
-    // Check local storage or system preference
-    const storedTheme = localStorage.getItem('theme');
-    if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      setIsDark(true);
-      document.documentElement.classList.add('dark');
-    } else {
-      setIsDark(false);
-      document.documentElement.classList.remove('dark');
-    }
+    document.documentElement.classList.add('dark');
   }, []);
-
-  const toggleTheme = () => {
-    if (isDark) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-      setIsDark(false);
-    } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-      setIsDark(true);
-    }
-  };
 
   return (
     <div className="w-full min-h-screen flex flex-col font-sans text-primary dark:text-white bg-white dark:bg-darkBg selection:bg-primary selection:text-white dark:selection:bg-white dark:selection:text-primary">
-      <Navbar isDark={isDark} toggleTheme={toggleTheme} />
+      <Navbar />
       <main className="flex-grow">
         <Hero />
         <PainPoints />
@@ -44,7 +22,7 @@ const App: React.FC = () => {
         <Process />
         <FinalCTA />
       </main>
-      <Footer isDark={isDark} />
+      <Footer />
     </div>
   );
 };

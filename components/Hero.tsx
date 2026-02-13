@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
 
         {/* Subtext */}
         <FadeIn delay={0.3}>
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed transition-colors">
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed transition-colors">
             Transformamos tareas manuales y repetitivas en sistemas autónomos inteligentes,
             permitiendo que tu equipo se enfoque en estrategias de alto valor.
           </p>

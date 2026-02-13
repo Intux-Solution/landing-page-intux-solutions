@@ -1,16 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Moon, Sun } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 import Button from './ui/Button';
 
-interface NavbarProps {
-  isDark: boolean;
-  toggleTheme: () => void;
-}
-
-const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
+const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,13 +31,14 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
   return (
     <nav
       className={`
-        fixed top-0 left-0 w-full z-50 transition-all duration-300
+        fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300
+        w-[95%] max-w-5xl rounded-full border border-white/10
         ${isScrolled
-          ? 'bg-white/80 dark:bg-darkBg/80 backdrop-blur-md border-b border-gray-100 dark:border-white/5 py-4'
-          : 'bg-transparent py-6'}
+          ? 'bg-[#191E26]/90 backdrop-blur-md shadow-lg shadow-black/10 py-3'
+          : 'bg-[#191E26]/80 backdrop-blur-sm py-4'}
       `}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-8 flex items-center justify-between">
+      <div className="px-6 md:px-8 flex justify-between items-center h-full">
         {/* Logo */}
         <div className="flex items-center">
           <a
@@ -54,86 +47,34 @@ const Navbar: React.FC<NavbarProps> = ({ isDark, toggleTheme }) => {
             className="block hover:opacity-80 transition-opacity"
           >
             <img
-              src={isDark ? "/logo-white.png" : "/logo-dark.png"}
+              src="/logo-white.png"
               alt="Intux Solutions"
               className="h-8 md:h-9 w-auto object-contain"
             />
           </a>
         </div>
 
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* Centered Desktop Links */}
+        <div className="hidden md:flex items-center gap-8 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           {links.map((link) => (
             <a
               key={link.name}
               href={`#${link.id}`}
               onClick={(e) => handleScrollTo(link.id, e)}
-              className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors"
+              className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
             >
               {link.name}
             </a>
           ))}
         </div>
 
-        {/* Right Section: Toggle + CTA */}
-        <div className="hidden md:flex items-center gap-4">
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors text-primary dark:text-white"
-            aria-label="Toggle theme"
-          >
-            {isDark ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
+        {/* Right Section: CTA only (Theme toggle removed) */}
+        <div className="flex items-center gap-4">
           <Button>Agendar Llamada</Button>
         </div>
 
-        {/* Mobile Menu Toggle + Theme Toggle (Mobile) */}
-        <div className="flex items-center gap-4 md:hidden">
-          <button
-            onClick={toggleTheme}
-            className="p-2 text-primary dark:text-white"
-          >
-            {isDark ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
-          <button
-            className="text-primary dark:text-white p-2"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? <X /> : <Menu />}
-          </button>
-        </div>
+        {/* Mobile Menu Removed as requested */}
       </div>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white dark:bg-darkCard border-b border-gray-100 dark:border-white/5 overflow-hidden"
-          >
-            <div className="flex flex-col p-6 gap-4 items-center">
-              {links.map((link) => (
-                <a
-                  key={link.name}
-                  href={`#${link.id}`}
-                  onClick={(e) => {
-                    setMobileMenuOpen(false);
-                    handleScrollTo(link.id, e);
-                  }}
-                  className="text-base font-medium text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-white"
-                >
-                  {link.name}
-                </a>
-              ))}
-              <Button className="w-full mt-4" onClick={() => setMobileMenuOpen(false)}>
-                Agendar Llamada
-              </Button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </nav>
   );
 };
